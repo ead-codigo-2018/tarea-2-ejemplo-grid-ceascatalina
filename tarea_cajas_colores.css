@@ -1,0 +1,69 @@
+
+/* Definición de aspectos principales de div cajas01 */
+
+.cajas01{
+	display: grid;
+	grid-template-columns: 20% auto 160px;
+	grid-auto-rows: minmax(129px, auto);
+	max-width: 1140px;
+	height: auto;
+	grid-gap: 1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Especificación por secciones en particular*/ 
+.cajas01_A{
+	background-color: #ffccb3;
+	grid-column: 1/4;
+	grid-area: cajas01_A
+}
+
+.cajas01_B{
+	background-color: #aeeaae;
+	grid-row: 2/4;
+	grid-area: cajas01_B
+}
+
+.cajas01_C{
+	background-color: #fcf1cf;
+	grid-row: 2/4;
+	grid-area: cajas01_C
+}
+
+.cajas01_D{
+	background-color: #86d2f9;
+	grid-row: 2/4;
+	grid-area: cajas01_D
+}
+
+.cajas01_E{
+	background-color: #f0d0fb;
+	grid-column: 1/4;
+	grid-area: cajas01_E
+}
+
+/* Orden en página normal panorámica */
+
+@media(min-width: 700px){
+	.cajas01{
+		grid-template-areas: 
+		"cajas01_A cajas01_A cajas01_A"
+		"cajas01_B cajas01_C cajas01_D"
+		"cajas01_B cajas01_C cajas01_D"
+		"cajas01_E cajas01_E cajas01_E";
+	}
+}
+
+@media(max-width: 700px){
+	.cajas01{
+		grid-template-rows: (5, 120px);
+		grid-template-areas: 
+		"cajas01_A cajas01_A cajas01_A"
+		"cajas01_D cajas01_D cajas01_D"
+		"cajas01_B cajas01_B cajas01_B"
+		"cajas01_C cajas01_C cajas01_C"
+		"cajas01_E cajas01_E cajas01_E";
+	}
+}
+
